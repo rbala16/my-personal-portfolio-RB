@@ -115,7 +115,7 @@ ul li a:hover {
   width: 140vh;
   height: 100vh;
   margin-right: -300px;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
@@ -124,7 +124,6 @@ ul li a:hover {
   display: flex;
   align-items: center;
   height: 100vh;
-  padding: 0 20px;
 }
 
 .profile-card {
@@ -336,4 +335,19 @@ ul li a:hover {
     color: #666;
     margin: auto;
   }
+}
+
+/* footer */
+#footer_portfolio {
+  padding: 20px;
+}
+
+.contact-info {
+  float: right;
+  display: flex;
+}
+
+.contact_me {
+  text-align: center;
+  padding: 20px;
 }
