@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton+SC&family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
 :root {
   --primary-color: #a855f7;
   --primary-color-dark: #9333ea;
@@ -11,7 +13,9 @@
   --max-width: 1200px;
 }
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 * {
@@ -20,6 +24,7 @@ body {
   box-sizing: border-box;
 }
 
+/* navigation bar */
 nav {
   width: 100%;
   position: fixed;
@@ -29,6 +34,7 @@ nav {
   z-index: 99;
   box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.3);
   padding: 20px;
+  position: fixed;
 }
 
 nav-content {
@@ -127,14 +133,18 @@ ul li a:hover {
   }
 }
 
+/* left side bar */
+
 .left_content {
   background-color: var(--extra-dark);
-  width: 120vh;
+  width: 140vh;
   height: 100vh;
   margin-right: -300px;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
+/* profile card and right content */
 .container {
   display: flex;
   align-items: center;
@@ -148,16 +158,18 @@ ul li a:hover {
   text-align: center;
   position: relative;
   max-width: 400px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-top: 70px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  margin-top: 100px;
   z-index: 1;
+  padding: 30px 30px 0px 30px;
 }
 
 .profile-pic {
-  width: 100px;
+  width: 300px;
   height: auto;
-  border-radius: 70%;
+  border-radius: 50%;
   margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .profile-card h1 {
@@ -168,18 +180,31 @@ ul li a:hover {
   font-family: "Arsenal SC", sans-serif;
 }
 
+.profile-card h1::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+  background-color: var(--primary-color-dark);
+  margin: 20px auto 0;
+}
+
 .profile-card p {
-  margin: 0;
   color: #666;
-  margin: 10px;
-  letter-spacing: 2px;
+  margin: 30px;
+  letter-spacing: 1px;
+
+  font-weight: 800;
 }
 
 .social-icons {
   margin-top: 15px;
   margin-bottom: 0px;
   background-color: #fff;
-  padding: 15px 30px;
+  /* padding: 15px; */
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .social-icons a {
@@ -188,16 +213,14 @@ ul li a:hover {
   color: #333;
   text-decoration: none;
   font-size: 20px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* right side content */
 .intro-text {
-  margin-left: -120px; /* Adjust this value to control overlap */
-  /* margin-right: -70px; */
+  margin-left: -120px; /* value to control overlap */
+
   background-color: #fff;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px; */
-  /* z-index: ; */
-  /* padding: 100px; */
   margin: auto;
   padding: 20px;
   position: relative;
@@ -205,37 +228,46 @@ ul li a:hover {
 
 .intro-text h1 {
   margin: 0;
-  font-size: 48px;
+  font-size: 80px;
   font-family: "Arsenal SC", sans-serif;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .intro-text p {
   font-size: 18px;
   margin: 10px 0;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn {
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 10px 25px;
   font-size: 16px;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
   cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn-resume {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color-dark);
   color: #fff;
   margin-right: 10px;
 }
 
 .btn-projects {
   background-color: #fff;
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  color: black;
+  border: 1px solid black;
 }
 
-.btn-resume:hover,
+.btn-resume:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid var(--primary-color-dark);
+}
 .btn-projects:hover {
-  opacity: 0.8;
+  background-color: var(--primary-color-dark);
+  color: white;
+  border: 1px solid var(--primary-color-dark);
 }
