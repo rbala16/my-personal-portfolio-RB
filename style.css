@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
 :root {
   --primary-color: #a855f7;
@@ -6,11 +8,14 @@
   --secondary-color: #ca8a04;
   --text-dark: #1f2937;
   --text-light: #6b7280;
-  --extra-light: #faf5ff;
+  --extra-light: #ffedf0;
+  --extra-dark: #ffdce1;
   --max-width: 1200px;
 }
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 * {
@@ -19,6 +24,7 @@ body {
   box-sizing: border-box;
 }
 
+/* navigation bar */
 nav {
   width: 100%;
   position: fixed;
@@ -26,6 +32,9 @@ nav {
   letter-spacing: 0;
   background-color: white;
   z-index: 99;
+  box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  position: fixed;
 }
 
 nav-content {
@@ -35,4 +44,296 @@ nav-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+/* nav .logo {
+  padding: 2px;
+} */
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: black;
+  transition: 0.3s;
+  text-decoration: none;
+  margin: 20px;
+  padding-top: 50px;
+  font-family: "Arsenal SC", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+nav .logo a:hover {
+  color: var(--primary-color-dark);
+  transition: 0.5s;
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+
+nav input i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-self: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+  padding: 10px;
+  float: right;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  color: var(--text-dark);
+  transition: 0.3s;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Arsenal SC", sans-serif;
+}
+
+ul li a:hover {
+  color: var(--primary-color-dark);
+  border-top: 2px solid var(--primary-color-dark);
+  border-bottom: 2px solid var(--primary-color-dark);
+}
+
+/* left side bar */
+
+.left_content {
+  background-color: var(--extra-dark);
+  width: 140vh;
+  height: 100vh;
+  margin-right: -300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* profile card and right content */
+.container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  padding: 0 20px;
+}
+
+.profile-card {
+  background-color: var(--extra-light);
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  margin-top: 100px;
+  z-index: 1;
+  padding: 30px 30px 0px 30px;
+}
+
+.profile-pic {
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.profile-card h1 {
+  margin: 10px;
+  font-size: 30px;
+  font-weight: 800;
+  font-style: italic;
+  font-family: "Arsenal SC", sans-serif;
+}
+
+.profile-card h1::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+  background-color: var(--primary-color-dark);
+  margin: 20px auto 0;
+}
+
+.profile-card p {
+  color: #666;
+  margin: 30px;
+  letter-spacing: 1px;
+
+  font-weight: 800;
+}
+
+.social-icons {
+  margin-top: 15px;
+  margin-bottom: 0px;
+  background-color: #fff;
+  /* padding: 15px; */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.social-icons a {
+  padding: 20px;
+  margin: auto;
+  color: #333;
+  text-decoration: none;
+  font-size: 20px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.social-icons a:hover {
+  color: var(--text-light);
+  transform: 0.4s;
+}
+/* right side content */
+.intro-text {
+  margin-left: -120px; /* value to control overlap */
+
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+}
+
+.intro-text h1 {
+  margin: 0;
+  font-size: 80px;
+  font-family: "Arsenal SC", sans-serif;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.intro-text p {
+  font-size: 18px;
+  margin: 10px 0;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-resume {
+  background-color: var(--primary-color-dark);
+  color: #fff;
+  margin-right: 10px;
+}
+
+.btn-projects {
+  background-color: #fff;
+  color: black;
+  border: 1px solid black;
+}
+
+.btn-resume:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid var(--primary-color-dark);
+  transition: 0.5s;
+}
+.btn-projects:hover {
+  background-color: var(--primary-color-dark);
+  color: white;
+  border: 1px solid var(--primary-color-dark);
+  transition: 0.5s;
+}
+/* media query  */
+@media (width < 750px) {
+  nav .checkbox {
+    display: block;
+  }
+
+  ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh-85px);
+    left: -100%;
+    top: 85px;
+    background-color: var(--extra-light);
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+  }
+  nav #check:checked ~ ul {
+    left: 0;
+  }
+  ul li a {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-card {
+    margin-bottom: 20px;
+  }
+
+  .intro-text h1 {
+    font-size: 36px;
+  }
+
+  .intro-text p {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-text {
+    padding: 20px;
+  }
+
+  .intro-text h1 {
+    font-size: 28px;
+    /* margin-top: -20px;
+    padding: -20px; */
+  }
+
+  .intro-text p {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+  .profile-card {
+    width: 300px;
+    position: absolute;
+    flex-direction: column;
+    height: 50%;
+  }
+  .profile-pic {
+    width: 200px;
+  }
+
+  .profile-card h1 {
+    margin: auto;
+  }
+  .profile-card p {
+    color: #666;
+    margin: auto;
+  }
 }

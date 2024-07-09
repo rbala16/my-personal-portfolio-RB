@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>My Personal Portfolio</title>
     <!-- Font awsome link -->
     <script
@@ -12,49 +13,60 @@
   </head>
   <!-- body starts here -->
   <body>
-    <!-- Navigation starts here -->
-    <nav>
-      <div class="nav-content">
-        <div class="logo">
-          <a href="#">Portfolio</a>
-        </div>
-        <label for="check" class="checkbox">
-          <!-- home icon  -->
-          <i class="fa-solid fa-bars"></i>
-        </label>
-        <input type="checkbox" name="check" id="check" />
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Resume</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <!-- Header starts here -->
     <section class="section">
-      <div class="section_container">
-        <div class="content">
-          <p class="subtitle">HELLO</p>
-          <h1 class="title">
-            I'm <span>Rajni Bala<br />a</span>Full Stack Web Developer
-          </h1>
-          <p class="description">
-            I am an enthusiastic learner who has a deep passion for acquiring
-            new skills and staying up-to-date with the latest technologies. My
-            goal is to become a full-stack web developer, and I find great joy
-            in coding while constantly seeking opportunities to expand my
-            knowledge.
-          </p>
-          <div class="action_btns">
-            <button class="hire_me">Hire me</button>
-            <button class="contact_me">Contact me</button>
+      <!-- Navigation starts here -->
+
+      <nav>
+        <div class="nav-content">
+          <div class="logo">
+            <a href="#">Rajni bala</a>
+          </div>
+          <label for="check" class="checkbox">
+            <!-- home icon  -->
+            <i class="fa-solid fa-bars"></i>
+          </label>
+          <input type="checkbox" name="check" id="check" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Profile card -->
+      <div class="container">
+        <div class="left_content"></div>
+
+        <div class="profile-card">
+          <img src="/assets/profile-pic.png" alt="Bala" class="profile-pic" />
+          <h1>Rajni bala</h1>
+          <p class="title">FULL STACK WEB DEVELOPER</p>
+
+          <div class="social-icons">
+            <a href="#"><i class="fa fa-dribbble"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
           </div>
         </div>
-        <div class="image">
-          <img src="assets/myProfile.jpg" alt="profile" />
+        <!-- Introduction -->
+        <div class="intro-text">
+          <h1>Hello</h1>
+          <p>Here's who I am and what I do</p>
+          <button type="button" class="btn btn-resume">RESUME</button>
+          <button type="button" class="btn btn-projects">PROJECTS</button>
+          <p>
+            I am an enthusiastic learner who has a deep passion for acquiring
+            new skills and staying up-to-date with the latest technologies.
+          </p>
+          <p>
+            I Looking to achieve responsible position where i can use my
+            knowledge and skills with an opportunity for professional challenge
+            and growth to support and enhance the objectives of the company
+          </p>
         </div>
       </div>
     </section>
