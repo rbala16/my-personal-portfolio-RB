@@ -456,8 +456,22 @@ ul li a:hover {
 }
 .job_description ul li {
   list-style-type: square;
+  padding: 5px;
 }
 
 li::marker {
   color: var(--primary-color-dark);
+}
+
+@media (max-width: 480px) {
+  .resume {
+    flex-direction: column;
+    align-items: center;
+  }
+  .job_description ul li {
+    font-size: small;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+  }
 }
