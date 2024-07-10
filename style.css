@@ -66,19 +66,21 @@ nav .logo a:hover {
   color: var(--primary-color-dark);
   transition: 0.5s;
 }
-
+/* bar icon */
 nav .checkbox {
   display: none;
+  float: right;
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 
 nav input {
   display: none;
 }
 
-nav input i {
-  font-size: 2rem;
-  color: var(--primary-color);
-  cursor: pointer;
+/* Show the navigation menu when the checkbox is checked */
+nav input:checked ~ .nav-content {
+  display: block;
 }
 
 ul {
@@ -115,7 +117,7 @@ ul li a:hover {
   width: 140vh;
   height: 100vh;
   margin-right: -300px;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
@@ -124,7 +126,6 @@ ul li a:hover {
   display: flex;
   align-items: center;
   height: 100vh;
-  padding: 0 20px;
 }
 
 .profile-card {
@@ -336,4 +337,65 @@ ul li a:hover {
     color: #666;
     margin: auto;
   }
+}
+
+/* footer */
+#footer_portfolio {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact_me {
+  text-align: center;
+  flex: 1;
+}
+
+.footer-icons a {
+  padding: 5px;
+  margin: 0 5px;
+  color: #333;
+  text-decoration: none;
+  font-size: 20px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.left-footer {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  #footer_portfolio {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .contact-info {
+    justify-content: center;
+  }
+
+  .contact_me {
+    float: none;
+  }
+  .left-footer {
+    margin-top: 10px;
+  }
+}
+
+/* resume page starts here */
+.resume-section {
+  background-color: var(--extra-dark);
 }
