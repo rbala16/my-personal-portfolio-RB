@@ -396,28 +396,57 @@ ul li a:hover {
 }
 
 /* resume page starts here */
-.resume-section {
-  background: url(./assets/background-one.png);
-  background-size: cover;
-  height: 120vh;
+
+.resume {
+  background-image: url("assets/background-pic.jpg");
+  background-size: auto;
+  height: auto;
   background-position: center;
-  background-repeat: repeat-x;
-  background-color: var(--extra-dark);
+  background-repeat: repeat-y;
   text-align: center;
-  padding: 50px;
+  padding: 50px 50px 50px 50px;
+  background-attachment: local;
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box;
 }
 
+.resume-section h2 {
+  position: absolute;
+  color: var(--primary-color-dark);
+}
 .job_One {
   background-color: var(--extra-light);
   border-radius: 8px;
-  max-width: 500px;
+  max-width: 700px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  margin-top: 20px;
+  margin-top: 40px;
   padding: 30px 30px 0px 30px;
   height: 400px;
   display: flex;
   position: relative;
   top: 25%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
+}
+
+.location_one {
+  width: 700px;
+}
+.location_one h3 {
+  color: var(--primary-color-dark);
+  padding: 10px;
+}
+
+.location_one h5 {
+  padding: 5px;
+  color: var(--text-light);
+}
+
+.job_description ul {
+  display: block;
+  width: auto;
+  height: auto;
+}
+.job_description ul li {
+  list-style-type: square;
 }
