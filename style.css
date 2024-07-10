@@ -429,6 +429,13 @@ ul li a:hover {
   transform: translate(-50%, 0%);
 }
 
+.job_One:hover {
+  opacity: 0.9;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: var(--extra-dark);
+}
+
 .location_one {
   width: 700px;
 }
@@ -449,4 +456,8 @@ ul li a:hover {
 }
 .job_description ul li {
   list-style-type: square;
+}
+
+li::marker {
+  color: var(--primary-color-dark);
 }
