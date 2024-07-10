@@ -66,19 +66,21 @@ nav .logo a:hover {
   color: var(--primary-color-dark);
   transition: 0.5s;
 }
-
+/* bar icon */
 nav .checkbox {
   display: none;
+  float: right;
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 
 nav input {
   display: none;
 }
 
-nav input i {
-  font-size: 2rem;
-  color: var(--primary-color);
-  cursor: pointer;
+/* Show the navigation menu when the checkbox is checked */
+nav input:checked ~ .nav-content {
+  display: block;
 }
 
 ul {
@@ -391,4 +393,9 @@ ul li a:hover {
   .left-footer {
     margin-top: 10px;
   }
+}
+
+/* resume page starts here */
+.resume-section {
+  background-color: var(--extra-dark);
 }
