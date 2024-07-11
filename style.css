@@ -259,7 +259,8 @@ ul li a:hover {
     display: block;
   }
 
-  ul {
+  nav ul {
+    /* need to check */
     position: absolute;
     width: 100%;
     height: calc(100vh-85px);
@@ -279,6 +280,11 @@ ul li a:hover {
 }
 
 @media (max-width: 768px) {
+  .left_content {
+    width: 20px;
+    height: inherit;
+    margin-right: -10px;
+  }
   .container {
     flex-direction: column;
     align-items: center;
@@ -404,15 +410,26 @@ ul li a:hover {
   background-position: center;
   background-repeat: repeat-y;
   text-align: center;
-  padding: 50px 50px 50px 50px;
+  padding: 50px;
   background-attachment: local;
-  width: 100%; /* Ensure full width */
+  width: 100%;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.resume-section {
+  width: 90%;
+  max-width: 800px;
 }
 
 .resume-section h2 {
-  position: absolute;
+  /* position: absolute; */
   color: var(--primary-color-dark);
+  margin-bottom: 1em;
+  padding-top: 20px;
 }
 .job_One {
   background-color: var(--extra-light);
@@ -420,13 +437,17 @@ ul li a:hover {
   max-width: 700px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   margin-top: 40px;
-  padding: 30px 30px 0px 30px;
+  padding: 30px;
   height: 400px;
   display: flex;
-  position: relative;
-  top: 25%;
+  flex-direction: row;
+  width: 100%;
+
+  /* position: relative; */
+
+  /* top: 25%;
   left: 50%;
-  transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%); */
 }
 
 .job_One:hover {
@@ -437,7 +458,8 @@ ul li a:hover {
 }
 
 .location_one {
-  width: 700px;
+  width: 100%;
+  /* margin-bottom: 20px; */
 }
 .location_one h3 {
   color: var(--primary-color-dark);
@@ -465,13 +487,37 @@ li::marker {
 
 @media (max-width: 480px) {
   .resume {
+    /* flex-direction: column;
+    align-items: center; */
+    padding: 10px;
+  }
+  .resume-section {
+    width: 100%;
+  }
+
+  .job_One {
+    padding: 15px;
+    display: flex;
     flex-direction: column;
     align-items: center;
+    height: 500px;
+  }
+
+  .location_one h3,
+  .location_one h4,
+  .location_one h5 {
+    font-size: 1em;
+  }
+
+  .job_description p {
+    font-size: 0.9em;
   }
   .job_description ul li {
-    font-size: small;
-    flex-direction: column;
+    font-size: 0.8em;
+    position: relative;
+    /* flex-direction: column;
     justify-content: center;
-    position: absolute;
+    need to check
+    position: absolute; */
   }
 }
