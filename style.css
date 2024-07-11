@@ -60,6 +60,7 @@ nav .logo a {
   font-family: "Arsenal SC", sans-serif;
   font-weight: 700;
   font-style: italic;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 nav .logo a:hover {
@@ -423,6 +424,7 @@ ul li a:hover {
 .resume-section {
   width: 90%;
   max-width: 800px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .resume-section h2 {
@@ -459,6 +461,7 @@ ul li a:hover {
 
 .location_one {
   width: 100%;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   /* margin-bottom: 20px; */
 }
 .location_one h3 {
@@ -475,6 +478,7 @@ ul li a:hover {
   display: block;
   width: auto;
   height: auto;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .job_description ul li {
   list-style-type: square;
@@ -515,6 +519,7 @@ li::marker {
   .job_description ul li {
     font-size: 0.8em;
     position: relative;
+
     /* flex-direction: column;
     justify-content: center;
     need to check
@@ -530,7 +535,7 @@ li::marker {
   background-position: center;
   background-repeat: repeat-y;
   text-align: center;
-
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   background-attachment: local;
   width: 100%;
   box-sizing: border-box;
@@ -566,6 +571,7 @@ li::marker {
 .project_description {
   width: 100%;
   padding: 10px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   /* margin-bottom: 20px; */
 }
 .project_description h3 {
