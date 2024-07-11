@@ -347,6 +347,9 @@ ul li a:hover {
   nav {
     padding: 10px;
   }
+  .left_content {
+    width: 100%;
+  }
 }
 
 /* footer */
@@ -530,6 +533,11 @@ li::marker {
   }
 }
 
+@media (max-width: 768px) {
+  .job_One {
+    height: fit-content;
+  }
+}
 /* Project page styling */
 .project_section {
   background-image: url("assets/background-pic.jpg");
@@ -696,7 +704,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: var(--primary-color-dark);
+  background-color: var(--primary-color);
 }
 
 .col-25 {
