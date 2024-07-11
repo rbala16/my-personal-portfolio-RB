@@ -344,6 +344,9 @@ ul li a:hover {
     color: #666;
     margin: auto;
   }
+  nav {
+    padding: 10px;
+  }
 }
 
 /* footer */
@@ -629,5 +632,105 @@ li::marker {
   .project_description img {
     font-size: 0.8em;
     position: relative;
+  }
+}
+/* form */
+.contact {
+  background-image: url("assets/background-pic.jpg");
+  background-size: auto;
+  height: auto;
+  background-position: center;
+  background-repeat: repeat-y;
+  text-align: center;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-attachment: local;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.contact_form {
+  background-color: var(--extra-light);
+  border-radius: 8px;
+  max-width: 700px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  margin: 40px;
+  padding: 50px;
+  height: 400px;
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  width: 800px;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+textarea {
+  height: 200px;
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type="submit"] {
+  background-color: var(--primary-color-dark);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 460px) {
+  .col-25,
+  .col-75,
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .contact_form {
+    width: 100%;
+    margin: 5px;
+    padding: 25px;
+    font-size: 1em;
   }
 }
